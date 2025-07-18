@@ -1,0 +1,591 @@
+/* === COMMON DROPDOWN STYLES === */
+#workBagsMenu,
+#travelBagsMenu,
+#AccessoriesMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 91%;                  /* Increased width */
+  max-width: 1700px;           /* Increased max-width */
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+  padding: 1.5rem 0;           /* Reduced vertical padding (height) */
+}
+
+/* Show on hover */
+#workBagsNav:hover #workBagsMenu,
+#AccessoriesNav:hover #AccessoriesMenu,
+#travelBagsNav:hover #travelBagsMenu {
+  display: block;
+}
+.dropdown-column a:hover,
+.dropdown-column a:focus,
+.dropdown-column a:active {
+  text-decoration: none;
+  color: #000; /* optional: keeps color consistent */
+}
+/* Container inside dropdown */
+.dropdown-container {
+  max-width: 2500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 0 3rem;
+  align-items: flex-start;
+  border-top: none;
+}
+
+/* Dropdown image (left side) */
+.dropdown-image {
+  height: 100%;     
+ overflow: hidden; /* Prevent zoom overflow */        
+  flex-shrink: 0;
+  width: 380px;               /* Reduced width (was 450px) */
+
+}
+
+.dropdown-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease; /* Smooth transition */
+  }
+.dropdown-image:hover img {
+  transform: scale(1.08); /* Zoom the image slightly */
+}
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+/* Columns section (right side) */
+.dropdown-columns {
+  display: flex;
+  flex: 1;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.dropdown-column h4 {
+  font-size: 0.95rem;         /* Slightly smaller font */
+  font-weight: bold;
+  margin-bottom: 0.5rem;      /* Reduced space below heading */
+}
+
+.dropdown-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-column li {
+  margin-bottom: 0.5rem;      /* Reduced item spacing */
+  display: flex;
+}
+
+.dropdown-column a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.95rem;
+}
+
+
+/* === MOBILE & TABLET RESPONSIVENESS === */
+@media (max-width: 768px) {
+  /* Hide dropdowns by default on small screens */
+  #workBagsMenu,
+  #travelBagsMenu,
+  #AccessoriesMenu {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    padding: 1rem 1.2rem;
+    display: none; /* will be toggled via JS on click */
+    z-index: 1;
+  }
+
+  /* Stack the nav and icons vertically */
+  .nav-icons-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-item a {
+    font-size: 16px;
+    padding: 6px 0;
+  }
+
+  /* Dropdown inner layout stacked */
+  .dropdown-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .dropdown-image {
+    width: 100%;
+  }
+
+  .dropdown-columns {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .dropdown-column {
+    width: 100%;
+  }
+
+  /* Header icons layout */
+  .header-icons {
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .icon-cart-empty,
+  .icon-search {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .dropdown-column h4,
+  .dropdown-column a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item a {
+    font-size: 15px;
+  }
+
+  .dropdown-container {
+    padding: 0 1rem;
+  }
+
+  .dropdown-columns {
+    gap: 1rem;
+  }
+
+  .icon-cart-empty,
+  .icon-search {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+ /* footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 70px 12px 30px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  margin-bottom: -10rem;
+}
+
+/* Newsletter section */
+.footer-top {
+ text-align: center;
+  margin-top: -25px; /* ✅ Pull the section up */
+  padding-bottom: 38px;
+}
+.footer-top h2 {
+    font-size: 20px;
+  font-weight: 1000;
+  margin: 0;               /* Remove default browser margin */
+  padding-bottom: 15px; 
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px 20px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  width: 400px;
+  max-width: 90%;
+  font-size: 16px;
+}
+
+/* Middle section */
+.footer-middle {
+ max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 10px;
+  flex-wrap: wrap;
+  
+}
+/* Left logo */
+.footer-logo {
+  flex: 0 0 auto;
+ /* increased space between logo icon and Shop */
+   padding-right: 400px;
+}
+
+.footer-logo img {
+   width: 60px;
+  height: auto;
+}
+
+/* Centered links */
+.footer-center {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  /* margin-left: -100px; */
+}
+
+.footer-links {
+   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;  /* was center */
+  gap: 10px; /* Controls spacing between columns */
+  flex: 1;
+ 
+}
+.footer-middle > .footer-center + .footer-center {
+  margin-left: -100px; /* Reduce spacing between Shop and Company */
+}
+.footer-middle > .footer-center:last-of-type {
+  margin-left: -100px; /* 👈 Pulls the Company column closer to the Shop column */
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;}
+
+/* Default arrow style elsewhere (no big margin) */
+.arrow {
+ font-size: 14px;
+  padding-left: 0;
+  position: static;
+  padding-left: 250px;
+ 
+}
+.link-with-arrow {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px; /* fixed width to make all items uniform */
+  text-decoration: none;
+  color: #fff;
+}
+
+.link-with-arrow .arrow {
+ position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+/* Divider */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #1a1a1a;
+  margin: 60px auto 0;
+  max-width: 1400px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-policies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-policies a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-policies a:hover {
+  text-decoration: underline;
+}
+
+ /* ---------- Dropdown Container ---------- */
+.footer-dropdown {
+  position: relative;
+}
+
+/* ---------- Dropdown Box ---------- */
+/* --- Dropdown Box Styling --- */
+.footer-dropdown-box {
+  display: none; /* Hidden by default */
+  position: relative;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  padding: 20px 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show dropdown when active */
+.footer-dropdown.open .footer-dropdown-box {
+  display: block;
+  max-height: 1000px;
+}
+
+
+/* --- Stacked Dropdown Layout (Vertical) --- */
+/* --- Common Layout for All Footer Dropdowns --- */
+#workBagsFooterDropdown .work-bags-dropdown,
+#travelBagsFooterDropdown .work-bags-dropdown,
+#accessoriesFooterDropdown .work-bags-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  color: black;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Image Wrapper */
+#workBagsFooterDropdown .dropdown-image-wrapper,
+#travelBagsFooterDropdown .dropdown-image-wrapper,
+#accessoriesFooterDropdown .dropdown-image-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image Box */
+#workBagsFooterDropdown .dropdown-image,
+#travelBagsFooterDropdown .dropdown-image,
+#accessoriesFooterDropdown .dropdown-image {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+#workBagsFooterDropdown .dropdown-image img,
+#travelBagsFooterDropdown .dropdown-image img,
+#accessoriesFooterDropdown .dropdown-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#workBagsFooterDropdown .dropdown-image p,
+#travelBagsFooterDropdown .dropdown-image p,
+#accessoriesFooterDropdown .dropdown-image p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 0;
+}
+
+/* Divider Line (Not Needed) */
+#workBagsFooterDropdown .dropdown-divider,
+#travelBagsFooterDropdown .dropdown-divider,
+#accessoriesFooterDropdown .dropdown-divider {
+  display: none;
+}
+
+/* --- Dropdown Columns Section --- */
+#workBagsFooterDropdown .dropdown-columns-section,
+#travelBagsFooterDropdown .dropdown-columns-section,
+#accessoriesFooterDropdown .dropdown-columns-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Each Column */
+#workBagsFooterDropdown .dropdown-column,
+#travelBagsFooterDropdown .dropdown-column,
+#accessoriesFooterDropdown .dropdown-column {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+/* Column Headings */
+#workBagsFooterDropdown .dropdown-column h4,
+#travelBagsFooterDropdown .dropdown-column h4,
+#accessoriesFooterDropdown .dropdown-column h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+  text-align: left;
+}
+
+/* Lists */
+#workBagsFooterDropdown .dropdown-column ul,
+#travelBagsFooterDropdown .dropdown-column ul,
+#accessoriesFooterDropdown .dropdown-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#workBagsFooterDropdown .dropdown-column ul li,
+#travelBagsFooterDropdown .dropdown-column ul li,
+#accessoriesFooterDropdown .dropdown-column ul li {
+  margin-bottom: 8px;
+}
+
+/* Links in List */
+#workBagsFooterDropdown .dropdown-column ul li a,
+#travelBagsFooterDropdown .dropdown-column ul li a,
+#accessoriesFooterDropdown .dropdown-column ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+#workBagsFooterDropdown .dropdown-column ul li a:hover,
+#travelBagsFooterDropdown .dropdown-column ul li a:hover,
+#accessoriesFooterDropdown .dropdown-column ul li a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+
+/* Close Dropdown Button */
+.close-dropdown {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  z-index: 10000;
+}
+
+.close-dropdown:hover {
+  color: #999;
+}
+
+/* --- Responsive Tweaks (Optional) --- */
+@media (max-width: 768px) {
+  .dropdown-column {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .dropdown-column:first-child {
+    border-top: none;
+  }
+
+  .footer-dropdown-box {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .footer-center {
+    margin-left: 0;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.scroll-to-top {
+  color: #fff;
+  font-size: 12px;
+   text-decoration: none;
+  display: inline-block; /* appears only as footer link */
+  background-color: #000;
+  border-radius: 50%;
+  transition: background 0.3s;
+  padding: 8px 12px;
+  margin-left: 800px;
+}
+
+
+
+.scroll-to-top:hover {
+  background-color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
