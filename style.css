@@ -563,17 +563,19 @@ body {
    border-radius: 1rem;
 }
 .cta-button {
-   background-color: #2b120c;
+ background-color: #2b120c;
   color: white;
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 400;
+  font-size: 18px;
   margin-top: 1rem;
   display: inline-block;
   text-align: center;
-  width: 400px; 
+  width: 400px;
+  transition: background-color 0.3s ease;
 }
 /* 
 read our story */
@@ -933,3 +935,67 @@ h1 {
   pointer-events: auto;
 }
 
+.as-seen-in {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.as-seen-in h2 {
+  font-size: 32px;
+  margin-bottom: 34px;
+  color: #333;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 150px;
+}
+
+.logos img {
+  max-height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logos img:hover {
+  filter: none;
+}
+
+.mida-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  padding: 60px 10px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mida {
+  width: 500px; /* wider divs like your image */
+  overflow-x: auto; /* allow scroll if needed */
+}
+
+.mida p {
+  font-size: 24px;  /* bigger text */
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  color: #000;
+ 
+}
+  
+.mida img {
+  max-height: 50px;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(100%);
+}
