@@ -13,9 +13,12 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   z-index: 999;
   padding: 1.5rem 0;           /* Reduced vertical padding (height) */
+  overflow: hidden;
+  height: 319px;
 }
 
-/* Show on hover */
+/* Show 
+on hover */
 #workBagsNav:hover #workBagsMenu,
 #AccessoriesNav:hover #AccessoriesMenu,
 #travelBagsNav:hover #travelBagsMenu {
@@ -33,10 +36,12 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  gap: 3rem;
-  padding: 0 3rem;
+  gap: 82px;
+  padding: 0 2rem;
   align-items: flex-start;
   border-top: none;
+ 
+  
 }
 
 /* Dropdown image (left side) */
@@ -44,8 +49,8 @@
   height: 100%;     
  overflow: hidden; /* Prevent zoom overflow */        
   flex-shrink: 0;
-  width: 380px;               /* Reduced width (was 450px) */
-
+  width: 500px;               /* Reduced width (was 450px) */
+  margin-left: -12vw;
 }
 
 .dropdown-image img {
@@ -58,7 +63,6 @@
   transform: scale(1.08); /* Zoom the image slightly */
 }
 .image-caption {
-  margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
   color: #333;
@@ -69,13 +73,15 @@
 .dropdown-columns {
   display: flex;
   flex: 1;
-  gap: 3rem;
+  gap: 4rem;
   justify-content: space-between;
+   margin-right: -20px;
 }
 
 .dropdown-column h4 {
   font-size: 0.95rem;         /* Slightly smaller font */
   font-weight: bold;
+    gap: 5rem;
   margin-bottom: 0.5rem;      /* Reduced space below heading */
 }
 
@@ -83,17 +89,21 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  
+  
 }
 
 .dropdown-column li {
   margin-bottom: 0.5rem;      /* Reduced item spacing */
   display: flex;
+   
 }
 
 .dropdown-column a {
   text-decoration: none;
   color: #000;
   font-size: 0.95rem;
+ 
 }
 
 
